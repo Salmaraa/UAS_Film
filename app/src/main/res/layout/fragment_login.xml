@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LoginFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp">
+
+        <ImageView
+            android:id="@+id/img_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_movie"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/lg_email"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/img_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:padding="8dp"
+            android:hint="@string/email"
+            android:drawableLeft="@drawable/baseline_email_24"
+            android:drawablePadding="8dp"
+            android:background="@drawable/edittext_bkg"
+            android:inputType="text"/>
+
+
+        <EditText
+            android:id="@+id/lg_pw"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/lg_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:padding="8dp"
+            android:hint="@string/pw"
+            android:drawableLeft="@drawable/baseline_lock_24"
+            android:drawablePadding="8dp"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_bkg"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/CheckBoxRemember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rmmbr"
+            android:textSize="12sp"
+            android:layout_marginStart="20dp"
+            app:buttonTint="@color/maroon"
+            android:textColor="@color/maroon"
+            android:layout_below="@+id/lg_pw"
+            android:layout_marginTop="15dp">
+        </com.google.android.material.checkbox.MaterialCheckBox>
+
+        <Button
+            android:id="@+id/forgetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lg_pw"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="-2dp"
+            android:background="@android:color/transparent"
+            android:text="@string/forgot"
+            android:textColor="@color/maroon"
+            android:textSize="12sp"/>
+
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="300dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/CheckBoxRemember"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:text="@string/lg"
+            android:onClick="loginUser"
+            android:backgroundTint="@color/maroon"/>
+
+        <TextView
+            android:id="@+id/newMember"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_mmbr"
+            android:layout_below="@+id/btnlogin"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="93dp"
+            android:textColor="@color/maroon">
+        </TextView>
+
+        <TextView
+            android:id="@+id/clickableRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="@string/rg"
+            android:textColor="@color/maroon"
+            android:clickable="true"
+            android:onClick="onTextClick"
+            android:layout_below="@+id/btnlogin"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/newMember"
+            android:layout_marginLeft="5dp"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="40dp">
+
+        <TextView
+            android:id="@+id/title_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/rgstr"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginTop="40dp"
+            android:textColor="@color/maroon"
+            >
+        </TextView>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rg_uname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/uname"
+            android:paddingStart="40dp"
+            android:padding="13dp"
+            android:background="@drawable/edittext_bkg"
+            android:layout_below="@+id/title_register"
+            android:layout_marginTop="20dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rg_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:paddingStart="40dp"
+            android:padding="13dp"
+            android:background="@drawable/edittext_bkg"
+            android:layout_below="@id/rg_uname"
+            android:layout_marginTop="10dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/rg_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/pw"
+            android:paddingStart="40dp"
+            android:padding="13dp"
+            android:background="@drawable/edittext_bkg"
+            android:layout_below="@id/rg_email"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:paddingStart="40dp"
+            android:padding="13dp"
+            android:background="@drawable/edittext_bkg"
+            android:layout_below="@id/rg_pw"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/CheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/check"
+            android:textSize="10sp"
+            app:buttonTint="@color/maroon"
+            android:layout_below="@+id/confirm_pw"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/maroon">
+        </com.google.android.material.checkbox.MaterialCheckBox>
+
+        <android.widget.Button
+            android:id="@+id/btn_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CheckBox"
+            android:layout_marginTop="8dp"
+            android:text="@string/rg"
+            android:background="@drawable/rounded_button"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold">
+        </android.widget.Button>
+
+        <TextView
+            android:id="@+id/haveAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            android:textSize="12sp"
+            android:textColor="@color/maroon">
+        </TextView>
+
+        <TextView
+            android:id="@+id/clickableLogin"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:text="Log In"
+            android:textSize="12sp"
+            android:textColor="@color/maroon"
+            android:clickable="true"
+            android:onClick="onTextClick"
+            android:layout_below="@+id/btn_register"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/haveAccount"
+            android:layout_marginLeft="5dp"/>
+
+    </RelativeLayout>
+</FrameLayout>
